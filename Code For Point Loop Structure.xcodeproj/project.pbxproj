@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDE6CCBE1ED90D2900374DEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE6CCBD1ED90D2900374DEE /* main.m */; };
+		DDE6CCC11ED90D2900374DEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE6CCC01ED90D2900374DEE /* AppDelegate.m */; };
+		DDE6CCC41ED90D2900374DEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE6CCC31ED90D2900374DEE /* ViewController.m */; };
+		DDE6CCC71ED90D2900374DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE6CCC51ED90D2900374DEE /* Main.storyboard */; };
+		DDE6CCC91ED90D2A00374DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE6CCC81ED90D2A00374DEE /* Assets.xcassets */; };
+		DDE6CCCC1ED90D2A00374DEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE6CCCA1ED90D2A00374DEE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DDE6CCB91ED90D2900374DEE /* Code For Point Loop Structure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code For Point Loop Structure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE6CCBD1ED90D2900374DEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDE6CCBF1ED90D2900374DEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DDE6CCC01ED90D2900374DEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DDE6CCC21ED90D2900374DEE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DDE6CCC31ED90D2900374DEE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DDE6CCC61ED90D2900374DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDE6CCC81ED90D2A00374DEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDE6CCCB1ED90D2A00374DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DDE6CCCD1ED90D2A00374DEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDE6CCB61ED90D2900374DEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDE6CCB01ED90D2900374DEE = {
+			isa = PBXGroup;
+			children = (
+				DDE6CCBB1ED90D2900374DEE /* Code For Point Loop Structure */,
+				DDE6CCBA1ED90D2900374DEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDE6CCBA1ED90D2900374DEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDE6CCB91ED90D2900374DEE /* Code For Point Loop Structure.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDE6CCBB1ED90D2900374DEE /* Code For Point Loop Structure */ = {
+			isa = PBXGroup;
+			children = (
+				DDE6CCBF1ED90D2900374DEE /* AppDelegate.h */,
+				DDE6CCC01ED90D2900374DEE /* AppDelegate.m */,
+				DDE6CCC21ED90D2900374DEE /* ViewController.h */,
+				DDE6CCC31ED90D2900374DEE /* ViewController.m */,
+				DDE6CCC51ED90D2900374DEE /* Main.storyboard */,
+				DDE6CCC81ED90D2A00374DEE /* Assets.xcassets */,
+				DDE6CCCA1ED90D2A00374DEE /* LaunchScreen.storyboard */,
+				DDE6CCCD1ED90D2A00374DEE /* Info.plist */,
+				DDE6CCBC1ED90D2900374DEE /* Supporting Files */,
+			);
+			path = "Code For Point Loop Structure";
+			sourceTree = "<group>";
+		};
+		DDE6CCBC1ED90D2900374DEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDE6CCBD1ED90D2900374DEE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDE6CCB81ED90D2900374DEE /* Code For Point Loop Structure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDE6CCD01ED90D2A00374DEE /* Build configuration list for PBXNativeTarget "Code For Point Loop Structure" */;
+			buildPhases = (
+				DDE6CCB51ED90D2900374DEE /* Sources */,
+				DDE6CCB61ED90D2900374DEE /* Frameworks */,
+				DDE6CCB71ED90D2900374DEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Code For Point Loop Structure";
+			productName = "Code For Point Loop Structure";
+			productReference = DDE6CCB91ED90D2900374DEE /* Code For Point Loop Structure.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDE6CCB11ED90D2900374DEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Spise Tech";
+				TargetAttributes = {
+					DDE6CCB81ED90D2900374DEE = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DDE6CCB41ED90D2900374DEE /* Build configuration list for PBXProject "Code For Point Loop Structure" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDE6CCB01ED90D2900374DEE;
+			productRefGroup = DDE6CCBA1ED90D2900374DEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDE6CCB81ED90D2900374DEE /* Code For Point Loop Structure */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDE6CCB71ED90D2900374DEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE6CCCC1ED90D2A00374DEE /* LaunchScreen.storyboard in Resources */,
+				DDE6CCC91ED90D2A00374DEE /* Assets.xcassets in Resources */,
+				DDE6CCC71ED90D2900374DEE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDE6CCB51ED90D2900374DEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE6CCC41ED90D2900374DEE /* ViewController.m in Sources */,
+				DDE6CCC11ED90D2900374DEE /* AppDelegate.m in Sources */,
+				DDE6CCBE1ED90D2900374DEE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DDE6CCC51ED90D2900374DEE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDE6CCC61ED90D2900374DEE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DDE6CCCA1ED90D2A00374DEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDE6CCCB1ED90D2A00374DEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDE6CCCE1ED90D2A00374DEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DDE6CCCF1ED90D2A00374DEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDE6CCD11ED90D2A00374DEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Code For Point Loop Structure/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spisetech.Code-For-Point-Loop-Structure";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DDE6CCD21ED90D2A00374DEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Code For Point Loop Structure/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spisetech.Code-For-Point-Loop-Structure";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDE6CCB41ED90D2900374DEE /* Build configuration list for PBXProject "Code For Point Loop Structure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDE6CCCE1ED90D2A00374DEE /* Debug */,
+				DDE6CCCF1ED90D2A00374DEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDE6CCD01ED90D2A00374DEE /* Build configuration list for PBXNativeTarget "Code For Point Loop Structure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDE6CCD11ED90D2A00374DEE /* Debug */,
+				DDE6CCD21ED90D2A00374DEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDE6CCB11ED90D2900374DEE /* Project object */;
+}
