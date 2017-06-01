@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CheckMatch.h"
+#import "Player.h"
 
 @interface ViewController ()
 
@@ -16,7 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    //Load Two classes of type Player
+
 }
 
 
@@ -25,86 +29,149 @@
     // Dispose of any resources that can be recreated.
 }
 
-//play a match with a random score
-- (IBAction)playMatch {
-    bool match = NO;
+- (IBAction)playMatch:(id)sender {
+    Player *player1 = [[Player alloc]init];
+    Player *player2 = [[Player alloc]init];
+    self.playMatchLabel.text = @"Match In Progress!";
     
-    //continue to play the match until it is over
-    while(match != YES){
+    player1.playerName = @"Jim";
+    player2.playerName = @"John";
+    
+    self.matchInProgress = TRUE;
+    
+    while(self.matchInProgress == TRUE){
+        int winner = arc4random_uniform(2);
         
-        //create a random number to determine who wins the point
-        int random = arc4random_uniform(2);
-        
-        //if player 1 wins the point add the point to his score, and then determine his games and what to do next
-        if(random == 0){
-            self.playerOneTotalPoints ++;
-            self.playerOnePoints ++;
-            
-            //determine if that is a game for player 1, if it is reset the point counters and add a game
-            if(self.playerOnePoints >= 4 && (self.playerOnePoints - self.playerTwoPoints)>= 2){
-                self.playerOnePoints = 0;
-                self.playerTwoPoints = 0;
-                self.playerOneGameCount ++;
+        if (winner == 0) {
+            player1.pointCount += 1;
+            player1.totalPointsWon ++;
+            //[player1 updateScore:player1 :player2];
+            if (player1.pointCount >= 4 && (player1.pointCount-player2.pointCount) >=2 ) {
+                player1.gameCount ++;
+                player1.pointCount = 0;
+                player2.pointCount = 0;
                 
-                //play a tiebreaker if that makes 6 games all
-                if (self.playerOneGameCount == 6 && self.playerTwoGameCount == 6) {
-                    
-                    //tiebraker
-                    bool tiebreaker = YES;
-                    
-                    while(tiebreaker){
-                        int random = arc4random_uniform(2);
-                        
-                        if(random == 0){
-                            self.playerOneTotalPoints ++;
-                            self.playerOnePoints ++;
-                            
-                            if(self.playerOnePoints >= 7 && (self.playerOnePoints - self.playerTwoPoints)>=2 ){
-                                self.playerOneSets ++;
-                                self.playerOneGameCount = 0;
-                                self.playerTwoGameCount = 0;
-                                tiebreaker = NO;
-                                
-                                if(self.playerOneSets == 0 && self.playerTwoSets == 0){
-                                self.playerOneGamesFirstLabel.text = @"7";
-                                }
-                                else if(self.playerOneSets == 1 && self.playerTwoSets == 0){
-                                self.playerOneGamesSecondLabel.text = @"7";
-                                }
-                            }
-                            
+                if (player1.gameCount >= 6 && (player1.gameCount-player2.gameCount)>=2) {
+                    player1.setCount ++;
+                    if (player1.setCount+player2.setCount == 1) {
+                        player1.gamesSetOne = player1.gameCount;
+                        player2.gamesSetOne= player2.gameCount;
+                        player1.gameCount = 0;
+                        player2.gameCount = 0;
                     }
-                        else{
-                            self.playerTwoPoints ++;
-                            self.playerTwoTotalPoints ++;
-                            
-                            if(self.playerTwoPoints >= 7 && (self.playerTwoPoints - self.playerOnePoints)>=2 ){
-                                self.playerTwoSets ++;
-                                self.playerOneGameCount = 0;
-                                self.playerTwoGameCount = 0;
-                                tiebreaker = NO;
-                            }
-                            
-                        }
-                        
+                    else if (player1.setCount+player2.setCount == 2){
+                        player1.gamesSetTwo = player1.gameCount;
+                        player2.gamesSetTwo = player2.gameCount;
+                        player1.gameCount = 0;
+                        player2.gameCount = 0;
+                    }
+                    else if (player1.setCount+player2.setCount == 3){
+                        player1.gamesSetThree = player1.gameCount;
+                        player2.gamesSetThree = player2.gameCount;
+                        player1.gameCount = 0;
+                        player2.gameCount = 0;
+                    }
+                    
+                }
+            }
+
+        }
+        
+        else if (winner == 1){
+            player2.pointCount ++;
+            player2.totalPointsWon ++;
+           // [self.updateScore updateScore:player1 :player2];
+            if (player2.pointCount >= 4 && (player2.pointCount-player1.pointCount) >= 2){
+                player2.gameCount ++;
+                player1.pointCount = 0;
+                player2.pointCount = 0;
+                
+                if (player2.gameCount >= 6 && (player2.gameCount-player1.gameCount)>=2) {
+                    player2.setCount ++;
+                    if (player2.setCount+player1.setCount == 1) {
+                        player1.gamesSetOne = player1.gameCount;
+                        player2.gamesSetOne= player2.gameCount;
+                        player1.gameCount = 0;
+                        player2.gameCount = 0;
+                    }
+                    else if (player2.setCount+player1.setCount == 2){
+                        player1.gamesSetTwo = player1.gameCount;
+                        player2.gamesSetTwo = player2.gameCount;
+                        player1.gameCount = 0;
+                        player2.gameCount = 0;
+                    }
+                    else if (player1.setCount+player2.setCount == 3){
+                        player1.gamesSetThree = player2.gameCount;
+                        player2.gamesSetThree = player2.gameCount;
+                        player1.gameCount = 0;
+                        player2.gameCount = 0;
+                    }
+                    
                 }
                 
+            }
+
+        }
+        if (player1.gameCount == 6 && player2.gameCount == 6) {
+            //[self.playTiebreaker playTiebreaker:player1 :player2];
+            bool tiebreakerInProgress = true;
+            while (tiebreakerInProgress) {
+                int pointWinner = arc4random_uniform(2);
                 
-                //determine if that means player 1 won a set
-                if(self.playerOneGameCount >= 6 && (self.playerOneGameCount-self.playerTwoGameCount) >= 2) {
-                    
-                    }
+                if (pointWinner == 0) {
+                    player1.pointCount ++;
+                }
+                else if (pointWinner == 1){
+                    player2.pointCount ++;
+                }
+                if (player1.pointCount >= 7 && (player1.pointCount-player2.pointCount)>=2) {
+                    player1.gameCount ++;
+                    player1.pointCount = 0;
+                    player2.pointCount = 0;
+                    tiebreakerInProgress = false;
+                }
+                else if (player2.pointCount >= 7 && (player2.pointCount-player1.pointCount)>=2){
+                    player2.gameCount ++;
+                    player1.pointCount = 0;
+                    player2.pointCount = 0;
+                    tiebreakerInProgress = false;
+                }
                 
             }
             
+            if (player2.setCount+player1.setCount == 1) {
+                player1.gamesSetOne = player1.gameCount;
+                player2.gamesSetOne= player2.gameCount;
+                player1.gameCount = 0;
+                player2.gameCount = 0;
+            }
+            else if (player2.setCount+player1.setCount == 2){
+                player1.gamesSetTwo = player1.gameCount;
+                player2.gamesSetTwo = player2.gameCount;
+                player1.gameCount = 0;
+                player2.gameCount = 0;
+            }
+            else if (player1.setCount+player2.setCount == 3){
+                player1.gamesSetThree = player1.gameCount;
+                player2.gamesSetThree = player2.gameCount;
+                player1.gameCount = 0;
+                player2.gameCount = 0;
+            }
+
         }
-        
-        if(self.playerOneSets == 2 || self.playerTwoSets == 2){
-            match = YES;
+        //[self.checkMatchProgress checkMatchCompleted:player1 :player2];
+        if(player1.setCount == 2 || player2.setCount == 2){
+            self.matchInProgress = false;
         }
-        
     }
-  }
+    
+    self.playerOneGamesFirstLabel.text = [NSString stringWithFormat:@"%i", player1.gamesSetOne];
+    self.playerTwoGamesFirstLabel.text = [NSString stringWithFormat:@"%i", player2.gamesSetOne];
+    self.playerOneGamesSecondLabel.text = [NSString stringWithFormat:@"%i", player1.gamesSetTwo];
+    self.playerTwoGamesSecondLabel.text = [NSString stringWithFormat:@"%i", player2.gamesSetTwo];
+    self.playerOneGamesThirdLabel.text = [NSString stringWithFormat:@"%i", player1.gamesSetThree];
+    self.playerTwoGamesThirdLabel.text = [NSString stringWithFormat:@"%i", player2.gamesSetThree];
+    
 }
 
 @end

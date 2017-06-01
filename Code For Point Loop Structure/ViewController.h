@@ -7,26 +7,37 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "CheckMatch.h"
+#import "Player.h"
+
+@class CheckMatch;
+@class Player;
 
 @interface ViewController : UIViewController
 
-//initialize all internal variables for keeping score
+//initialize classes for players
+@property (strong, nonatomic) Player *player1;
+@property (strong, nonatomic) Player *player2;
 
-@property (nonatomic) int playerOneSets;
-@property (nonatomic) int playerTwoSets;
-@property (nonatomic) int playerOneTotalPoints;
-@property (nonatomic) int playerTwoTotalPoints;
-@property (nonatomic) int playerOnePoints;
-@property (nonatomic) int playerTwoPoints;
-@property (nonatomic) int playerOneGameCount;
-@property (nonatomic) int playerTwoGameCount;
-@property (nonatomic) int playerOneGamesFirst;
-@property (nonatomic) int playerTwoGamesFirst;
-@property (nonatomic) int playerOneGamesSecond;
-@property (nonatomic) int playerTwoGamesSecond;
-@property (nonatomic) int playerOneGamesThird;
-@property (nonatomic) int playerTwoGamesThird;
+//Properties for Checking Match in progress
+@property (nonatomic) bool matchInProgress;
+@property (nonatomic) CheckMatch *checkMatchProgress;
 
+//Properties for checking who won point
+@property (nonatomic) CheckMatch *checkPointWinner;
+
+//Properties for updating score
+@property (nonatomic) CheckMatch *updateScore;
+
+//Properties for playing tiebreaker
+@property (nonatomic) CheckMatch *playTiebreaker;
+
+
+
+//Properties connected to labels and actions on View Controller
+
+@property (weak, nonatomic) IBOutlet UILabel *playMatchLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *playerOneTotalPointsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *playerTwoTotalPointsLabel;
@@ -37,7 +48,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *playerOneGamesThirdLabel;
 @property (weak, nonatomic) IBOutlet UILabel *playerTwoGamesThirdLabel;
 
+ 
+
 @property (weak, nonatomic) IBOutlet UIButton *playMatchButton;
+
+
+
+
+//methods
 
 
 

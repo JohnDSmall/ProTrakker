@@ -13,7 +13,8 @@
 		DDE6CCC71ED90D2900374DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE6CCC51ED90D2900374DEE /* Main.storyboard */; };
 		DDE6CCC91ED90D2A00374DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE6CCC81ED90D2A00374DEE /* Assets.xcassets */; };
 		DDE6CCCC1ED90D2A00374DEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE6CCCA1ED90D2A00374DEE /* LaunchScreen.storyboard */; };
-		DDE6CCD51ED9105800374DEE /* PlayPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE6CCD41ED9105800374DEE /* PlayPoint.m */; };
+		DDE6CCD81EDA4C8500374DEE /* CheckMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE6CCD71EDA4C8500374DEE /* CheckMatch.m */; };
+		DDE6CCDB1EDA645D00374DEE /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE6CCDA1EDA645D00374DEE /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,10 @@
 		DDE6CCC81ED90D2A00374DEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDE6CCCB1ED90D2A00374DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDE6CCCD1ED90D2A00374DEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDE6CCD31ED9105800374DEE /* PlayPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayPoint.h; sourceTree = "<group>"; };
-		DDE6CCD41ED9105800374DEE /* PlayPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayPoint.m; sourceTree = "<group>"; };
+		DDE6CCD61EDA4C8500374DEE /* CheckMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckMatch.h; sourceTree = "<group>"; };
+		DDE6CCD71EDA4C8500374DEE /* CheckMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckMatch.m; sourceTree = "<group>"; };
+		DDE6CCD91EDA645D00374DEE /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		DDE6CCDA1EDA645D00374DEE /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +68,10 @@
 				DDE6CCC01ED90D2900374DEE /* AppDelegate.m */,
 				DDE6CCC21ED90D2900374DEE /* ViewController.h */,
 				DDE6CCC31ED90D2900374DEE /* ViewController.m */,
-				DDE6CCD31ED9105800374DEE /* PlayPoint.h */,
-				DDE6CCD41ED9105800374DEE /* PlayPoint.m */,
+				DDE6CCD61EDA4C8500374DEE /* CheckMatch.h */,
+				DDE6CCD71EDA4C8500374DEE /* CheckMatch.m */,
+				DDE6CCD91EDA645D00374DEE /* Player.h */,
+				DDE6CCDA1EDA645D00374DEE /* Player.m */,
 				DDE6CCC51ED90D2900374DEE /* Main.storyboard */,
 				DDE6CCC81ED90D2A00374DEE /* Assets.xcassets */,
 				DDE6CCCA1ED90D2A00374DEE /* LaunchScreen.storyboard */,
@@ -155,9 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE6CCD81EDA4C8500374DEE /* CheckMatch.m in Sources */,
 				DDE6CCC41ED90D2900374DEE /* ViewController.m in Sources */,
 				DDE6CCC11ED90D2900374DEE /* AppDelegate.m in Sources */,
-				DDE6CCD51ED9105800374DEE /* PlayPoint.m in Sources */,
+				DDE6CCDB1EDA645D00374DEE /* Player.m in Sources */,
 				DDE6CCBE1ED90D2900374DEE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
